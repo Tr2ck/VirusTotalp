@@ -18,7 +18,6 @@ def get(number):
                 print url
                 res = requests.get(url,headers=header)
                 t = json.loads(res.text)
-                print t
                 if t.has_key('error') != 'Ture':
                         for x in range(10):
                                 print t['data'][x]['id']
