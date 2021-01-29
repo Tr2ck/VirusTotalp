@@ -15,8 +15,9 @@ def get(number):
 		for x in hostname:
 			temp = x['hostname']
 			print temp
+			str(temp)
 			f = open(filename,'a')
-			f.write(json.dumps(temp,ensure_ascii=False))
+			f.write(temp)
 			f.write('\n')
 		f.close()
 	except:
