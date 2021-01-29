@@ -11,8 +11,9 @@ def get(number):
 		headers = {'User-Agent':'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36'}
 		response = requests.get(url,headers=headers)
 		jsonstr = json.loads(response.text)     
-		hostname = jsonstr['resolutions']   #打印反查结果
-		print hostname
+		hostname = jsonstr['resolutions']
+		for x in hostname:
+			print x['hostname']
 		f = open(filename,'a')
 		f.write(json.dumps(hostname,ensure_ascii=False))
 		f.write('\n')
