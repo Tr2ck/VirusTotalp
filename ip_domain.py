@@ -24,7 +24,7 @@ def get(number):
 
 
 def main():
-	for number in range(1,254):
+	for number in range(1,255):
 		get(number)
 
 
