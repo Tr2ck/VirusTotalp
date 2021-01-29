@@ -18,7 +18,7 @@ def get(number):
 			f = open(filename,'a')
 			f.write(json.dumps(temp,ensure_ascii=False))
 			f.write('\n')
-			f.close()
+		f.close()
 	except:
 		pass
 
