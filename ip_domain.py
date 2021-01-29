@@ -12,11 +12,10 @@ def get(number):
 		response = requests.get(url,headers=headers)
 		jsonstr = json.loads(response.text)     
 		hostname = jsonstr['resolutions']
+		f = open(filename,'a')
 		for x in hostname:
 			temp = x['hostname']
 			print temp
-			str(temp)
-			f = open(filename,'a')
 			f.write(temp)
 			f.write('\n')
 		f.close()
