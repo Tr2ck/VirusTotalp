@@ -13,11 +13,12 @@ def get(number):
 		jsonstr = json.loads(response.text)     
 		hostname = jsonstr['resolutions']
 		for x in hostname:
-			print x['hostname']
-		f = open(filename,'a')
-		f.write(json.dumps(hostname,ensure_ascii=False))
-		f.write('\n')
-		f.close()
+			temp = x['hostname']
+			print temp
+			f = open(filename,'a')
+			f.write(json.dumps(temp,ensure_ascii=False))
+			f.write('\n')
+			f.close()
 	except:
 		pass
 
