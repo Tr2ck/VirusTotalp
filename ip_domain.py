@@ -2,7 +2,7 @@ import requests
 import json
 
 ip="127.0.0."
-filename = "log.txt"
+filename = ip+"_log.txt"
 
 def get(number):
 	try:
